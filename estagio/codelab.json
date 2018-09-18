@@ -1,0 +1,26 @@
+{
+  "environment": "web",
+  "source": "inter-estagio.md",
+  "format": "html",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2018-09-18T01:53:11-03:00",
+  "id": "estagio",
+  "duration": 42,
+  "title": "Inter estágio",
+  "author": "Davidson Castro Orlando Souto",
+  "summary": "Programa de estágio do Banco Inter",
+  "theme": "",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "javascript"
+  ],
+  "tags": [
+    "web"
+  ],
+  "feedback": "github.com/mariopce",
+  "ga": "0",
+  "url": "estagio"
+}

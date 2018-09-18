@@ -1,0 +1,451 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Inter estágio</title>
+  <script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../../elements/codelab.html">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <style is="custom-style">
+    body {
+      font-family: "Roboto",sans-serif;
+      background: var(--google-codelab-background, #F8F9FA);
+    }
+  </style>
+  
+</head>
+<body unresolved class="fullbleed">
+
+  <google-codelab title="Inter estágio"
+                  environment="web"
+                  feedback-link="github.com/mariopce">
+    
+      <google-codelab-step label="Introdução" duration="3">
+        <p>Este será o seu guia para construção do desafio. O primeiro e mais importe ponto é:</p>
+<ul>
+<li>Relaxe, todos nós já estivemos na sua situação, e sabemos o quão dificil é, então procurem se divertir e lembrem-se que errar faz parte do aprendizado.</li>
+<li>Nós temos diversas vagas, então não se preucupem com a competição. Deêm o seu melhor.</li>
+<li>No seu ambiente de trabalho o sucesso é e sempre será resultado de um trabalho em equipe!!!</li>
+<li>No decorrer deste guia vocês poderão encontrar novos termos, mas não se preucupem, pois não esperamos que vocês já os conheçam. O próprio guia irá desmistificá-los e vocês podem pedir ajuda a qualquer momento.</li>
+</ul>
+<p>Bora para a parte prática!!! O desafio possui duas partes, uma de desenvolvimento e outra de criação/especificação.<br>O segredo é dividir para conquistar!!!</p>
+<p>O que iremos utilizar:</p>
+<ul>
+<li>Internet</li>
+<li>Firebase</li>
+<li>Javascript</li>
+<li>Html</li>
+<li>Css</li>
+<li>Visual code</li>
+<li>Node(npm)</li>
+<li>Papel e caneta</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Desafio" duration="3">
+        <ul>
+<li>Vocês irão construir um novo produto para o Banco Inter, chamado Inter Viagens. Este produto oferecerá diversas funcionalidades relacionadas à viagens aéreas.</li>
+<li>O desenvolvimento de software morderno é realizado de forma incremental, ou seja, criamos pequenas versōes funcionais do nosso produto que agregue valor para nossos clientes.</li>
+</ul>
+<aside class="special"><p>Não é necessário ter todo o produto desenvolvido/especificado para lancá-lo.</p>
+</aside>
+<p>A primeira versão funcional do nosso produto será a construção de um buscador de passagens aéreas. Vocês irão desenvolver esta parte.</p>
+<aside class="warning"><p>Não é necessário que a primeira versão esteja concluída para começarmos a especificar a segunda fase do nosso produto.</p>
+</aside>
+<p>Como sugestão, vocês deverão criar um programa de fidelidade para o Inter Viagens (Exemplos: Smiles, Km de vantagem, Clube azul).</p>
+<p>Para documentar os requisitos levantados, poderão utilizar recursos como:</p>
+<ul>
+<li>Estória de usuário - Descrição simples da necessidade, sob o ponto de vista do usuário.</li>
+</ul>
+<p>O que é Estória de usuário <a href="http://blog.myscrumhalf.com/2011/10/user-stories-o-que-sao-como-usar" target="_blank">usuário?</a></p>
+<p>O que é um critério de <a href="http://blog.myscrumhalf.com/2011/10/criterios-de-aceitacao-das-user-stories" target="_blank">aceitação</a></p>
+<ul>
+<li>Diagramas - Diagrama de atividade, sequência, etc.</li>
+<li>Protótipos - Protótipos de tela.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="A primeira estória" duration="3">
+        <p>Buscar passagens:</p>
+<p>Eu como cliente desejo buscar passagens aéreas para facilitar o meu dia a dia na compra de passagens.</p>
+<p>Critérios de aceitação:</p>
+<ul>
+<li>O cliente deverá informar o aeroporto de origem.</li>
+<li>O cliente deverá informar o aeroporto de destino.</li>
+<li>Após a busca o sistema deverá exibir para o cliente o resultado da mesma.</li>
+</ul>
+<p>Dicas:</p>
+<ul>
+<li>A segunda fase do nosso projeto já pode ser iniciada!!!</li>
+<li>Esta é provavelmente a primeira estória de usuário que vocês viram na vida. Não se preucupem com a perfeiçao, o ótimo é inimigo do bom.</li>
+<li>Para as pessoas que irão construir a especificação, deêm uma olhada no último item deste guia &#34;Bonus&#34;.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="O desenvolvimento" duration="3">
+        <p>Lembrem-se: A internet poderá ser utilizada a qualquer momento.</p>
+<ul>
+<li>Como já dito, html e javascript serão utilizados para o desenvolvimento do nosso produto.</li>
+<li>O firebase será utilizado para hostear a aplicação e também como base de dados.</li>
+</ul>
+<aside class="special"><p>O Firebase é uma plataforma de desenvolvimento de aplicativos para dispositivos móveis e da Web desenvolvida pela Firebase, Inc. em 2011 e adquirida pelo Google em 2014.</p>
+</aside>
+<p><a href="https://firebase.google.com/?hl=pt-br" target="_blank">Acessar</a> ( Caso vocês não possuam uma conta no google, chegou o momento haha!)</p>
+<p>Ir para o console <img alt="Console firebase" src="img/20ac8c01552fcc1f.png"></p>
+<p>Criar um novo projeto.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configuracao Ambiente" duration="3">
+        <ul>
+<li>Abra o powerShell do windows.</li>
+<li>Aqui utilizaremos o gerenciador de dependências do node o npm.</li>
+</ul>
+<aside class="special"><p>Node.js é uma plataforma construída sobre o motor JavaScript do Google Chrome para facilmente construir aplicações de rede rápidas e escaláveis.</p>
+</aside>
+<p>Verificar se o node está instalado.</p>
+<pre><code>npm help
+</code></pre>
+<ul>
+<li>Verificar se o  utilitário de linha de comando do firebase está instalado.</li>
+</ul>
+<pre><code>firebase help
+</code></pre>
+<ul>
+<li>Caso o firebase não esteja instalado.</li>
+</ul>
+<pre><code>npm install -g firebase-tools
+</code></pre>
+<ul>
+<li>Acesse o firebase, clique em hosting e siga o tutorial.</li>
+<li>Basicamente</li>
+</ul>
+<pre><code>firebase login
+</code></pre>
+<pre><code>firebase init
+</code></pre>
+<pre><code>firebase deploy
+</code></pre>
+<p>Ao rodar o commando firebase init vocês deverão selecionar &#34;Database e Hosting&#34; e isto irá criar um projeto inicial. O terminal permitirá que vocês selecionem o projeto desejado.<br>Quando o terminal solicitar &#34;Configure as a single-page app&#34;, selecione &#34;y&#34;.</p>
+<ul>
+<li>Após rodar o comando deploy o projeto será hostiado no firebase. Vocês poderão conferir acessando hosting e clicando no dominio.</li>
+</ul>
+<p><img alt="Deploy" src="img/f057dbf14fe00387.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configurando Dependências" duration="3">
+        <ul>
+<li>Acessar a pasta public do seu projeto.</li>
+<li>Abrir o arquivo index e alterar conforme <a href="https://gitlab.com/snippets/1754760" target="_blank">link</a>. O html no link disponibilizado é apenas para auxílio, não precisa ser necessariamente seguido. Este index.html já está configurado com as dependências do firebase e bootstrap.</li>
+<li>O bootstrap é totalmente opcional.</li>
+</ul>
+<p>Para facilitar a busca do nosso cliente utilizaremos um componente de autoComplete. Vocês não precisarão desenvolver este componente, apenas utilizá-lo.</p>
+<p>Vocês deverão criar um arquivo chamado autoComplete.js e autoComplete.css.</p>
+<ul>
+<li><a href="https://gitlab.com/snippets/1754761" target="_blank">Acesse</a> para pegar o conteúdo do arquivo autoComplete.js</li>
+<li><a href="https://gitlab.com/snippets/1754762" target="_blank">Acesse</a> para pegar o conteúdo do arquivo autoComplete.css</li>
+<li>Adicionar o autoComplete.js e autoCompletye.css no index.html</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configurando o Banco de Dados" duration="3">
+        <ul>
+<li>Utilizaremos um recurso extremamente interessante do firebase: o seu banco de dados em tempo real.</li>
+</ul>
+<aside class="special"><p>O Firebase Realtime Database é um banco de dados hospedado na nuvem, em que os dados são armazenados como JSON e sincronizados em tempo real com todos os clientes conectados. Quando você cria apps em plataformas cruzadas com nossos SDKs para iOS, Android e JavaScript, todos os clientes compartilham uma instância do Realtime Database e recebem automaticamente atualizações com os dados mais recentes.</p>
+</aside>
+<ol type="1">
+<li>Acesse o firebase e clique em database</li>
+<li>Escolha Realtime database</li>
+</ol>
+<p><img alt="Banco de dados" src="img/d3a904d75d87f0f4.png"></p>
+<p>Criamos uma pequena base de dados para vocês. Segue o link do json a ser importado no <a href="https://gitlab.com/snippets/1754772" target="_blank">firebase</a></p>
+<aside class="special"><p>JSON (JavaScript Object Notation) é um modelo para armazenamento e transmissão de informações no formato texto. Apesar de muito simples, tem sido bastante utilizado por aplicações Web devido a sua capacidade de estruturar informações de uma forma bem mais compacta do que a conseguida pelo modelo XML, tornando mais rápido o parsing dessas informações. Isto explica o fato de o JSON ter sido adotado por empresas como Google e Yahoo, cujas aplicações precisam transmitir grandes volumes de dados.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Construindo a aplicação" duration="3">
+        <p>O desenvolvimento será feito praticamente na sua totalidade utilizando dois arquivos, o index.html e o main.js (ops ainda criamos o segundo).</p>
+<ul>
+<li>Criar um arquivo chamado main.js e importar o mesmo no index.html</li>
+</ul>
+<p>Para nossa aplicação funcionar integrada ao firebase precisamos de algumas configurações.</p>
+<ul>
+<li>O firebase suporta aplicações web, android e ios, no nosso caso vamos selecionar web.</li>
+</ul>
+<p><img alt="Web App" src="img/2467cd691c3489af.png"></p>
+<p>Será necessária a utilizaçaão do código que o firebase fornecerá. Vocês deverão criar uma função dentro do arquivo main.js com este código.</p>
+<p><img alt="Código Firebase" src="img/327c639f3a6d3fa.png"></p>
+<ul>
+<li>Seguem abaixo exemplos de como criar uma function utilizando a nova versão do javascript (se não ficar claro como utilizar, o google está sempre ai).</li>
+</ul>
+<pre><code>// Definição de uma função
+const interHelloWordFuncaoSoma = (x, y) =&gt; {
+  return x + y
+}
+
+const interHelloWordFuncao = () =&gt; {
+  console.log(&#39;Hello World&#39;);
+}
+
+//Executando a função
+interHelloWordFuncaoSoma(1, 2) // 3
+
+interHelloWordFuncao(); // Hello World
+
+</code></pre>
+<ul>
+<li>O browser utiliza o DOM para renderizar os componentes.</li>
+</ul>
+<aside class="special"><p>Então, o que é o DOM? O DOM (Document Object Model) é uma interface que representa como os documentos HTML e XML são lidos pelo seu browser. Após o browser ler seu documento HTML, ele cria um objeto que faz uma representação estruturada do seu documento e define meios de como essa estrutura pode ser acessada. Nós podemos acessar e manipular o DOM com JavaScript, é a forma mais fácil e usada.Existem diversos detalhes relacionados ao DOM, mas o mais importe por hora é que normalmente precisamos esperar o browser carregar o DOM antes de comecarmos a manipular o mesmo.</p>
+</aside>
+<p>Segue o código que poderá auxiliar neste processo.</p>
+<pre><code>document.onreadystatechange = () =&gt; {
+    if (document.readyState === &#39;complete&#39;) {
+        //Colocar código que será executado após o DOM terminar de carregar.
+    }
+};
+</code></pre>
+<p>Dicas:</p>
+<ul>
+<li>Utilizem o máximo possīvel de funcões para separar o seu código. Além de mais legivel, isola melhor as responsabilidades.</li>
+</ul>
+<p><a href="https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript" target="_blank">Sobre funcoes javascript</a></p>
+<p><a href="https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript" target="_blank">Mais sobre Funcoes javascript</a></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Buscando dados" duration="3">
+        <p>Para que nosso cliente possa escolher quais aeroportos ele pode viajar, precisamos buscar os dados de nossa base!!!</p>
+<pre><code>let refDb = firebase.database().ref(&#39;valorBuscado&#39;);
+    refDb.on(&#39;value&#39;, function (snapshot) {
+
+        let valorDados = snapshot.val();
+       //Codigo a ser executado após callback
+
+    });
+</code></pre>
+<p>Quando pedimos o firebase para nos disponbilizar os dados, ele não o faz de forma síncrona.<br>No momento em que o firebase estiver pronto para disponbilizar os dados, ele irá fazer um &#34;callBack&#34;. Na prática o código<br>dentro do método &#34;on&#34; só será executado quando o firebase estiver pronto.</p>
+<ul>
+<li>Lembrem-se: Ao realizar a busca, vocês irão recuperar um array de objetos.</li>
+</ul>
+<p><a href="https://www.w3schools.com/js/js_object_properties.asp" target="_blank">Como acessar propriedades de um objeto</a></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="AutoComplete" duration="3">
+        <p>Para que nosso cliente não precise digitar todo o nome da cidade do aeroporto iremos utilizar um componente de autoComplete.</p>
+<p>Parâmetros do autoComplete (elemento, array de strings).</p>
+<pre><code> autocomplete(document.getElementById(&#34;idElemento&#34;), objetoArrayString);
+</code></pre>
+<ul>
+<li>Link para maiores <a href="https://www.w3schools.com/howto/howto_js_autocomplete.asp" target="_blank">dúvidas</a></li>
+</ul>
+<p>Dicas:</p>
+<ul>
+<li>Vocês provavelmente precisarão trabalhar o objeto retornado pelo Firebase. Existe um método chamado &#34;map&#34; que pode ser útil.</li>
+</ul>
+<pre><code>// O que voce tem
+const pessoas = [
+  { id: 20, nome: &#39;Captain Piett&#39; },
+  { id: 24, nome: &#39;General Veers&#39; },
+  { id: 56, nome: &#39;Admiral Ozzel&#39; },
+  { id: 88, nome: &#39;Commander Jerjerrod&#39; }
+];
+// O que voce precisa
+[20, 24, 56, 88]
+
+
+let ids = pessoas.map(pessoa =&gt; {
+  return pessoa.id;
+});
+
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Buscando as passagens" duration="3">
+        <p>Precisaremos construir uma função no main.js para buscar as passagens e uma forma de acioná-la.</p>
+<p>Uma das maneiras é criar um botão com o evento html de &#34;onClick&#34;<br><a href="https://www.w3schools.com/jsref/event_onclick.asp" target="_blank">Html evento de clique</a></p>
+<p>Para buscarmos as passagens precisamos das informações preenchidas pelo nosso cliente. Logo, precisaremos do valor preenchido no DOM!!</p>
+<pre><code>document.getElementById(&#34;idElemento&#34;).value;
+</code></pre>
+<p>Lembrem-se: O elemento DOM irá apenas retornar o nome da cidade. Como vocês vão perceber as passagens não possuem o nome da cidade, apenas o código do aeroporto.</p>
+<p>Para realizarmos a busca das passagens precisamos que as informações preenchidas pelo nosso cliente, objeto de aeroportos e objeto de passagens se encontrem. O método filter poderá auxiliar.</p>
+<pre><code>let pessoas = [{
+    nome: &#34;Maria&#34;,
+    bairro: &#34;Castelo&#34;,
+    idade: 15
+},
+
+{
+    nome: &#34;Jose&#34;,
+    bairro: &#34;Buritis&#34;,
+    idade: 20
+},
+
+{
+    nome: &#34;Bruna&#34;,
+    bairro: &#34;Buritis&#34;,
+    idade: 20
+}];
+
+// O metodo filter sempre retorna um array, mesmo que o resultado seja apenas um resultado;
+// Caso seja necessario podemos pegar apenas a 1 posicao utilizando [0];
+let pessoa = pessoas.filter(p =&gt; p.nome === &#34;jose&#34;)[0];
+console.log(pessoa.bairro);
+//Filtramos a pessoa desejada e agora podemos ter acesso as propriadades da mesma 
+//Maneira direta
+pessoas.filter(p =&gt; p.nome === &#34;jose&#34;)[0].bairro;
+// Outra maneira de utilizar o metodo filter
+  let pessoasFilter = pessoas.filter(pessoa =&gt; {
+       return pessoa.bairro === &#34;Buritis&#34; &amp;&amp; pessoa.idade === 20;
+    });
+</code></pre>
+<p>Dicas:</p>
+<ul>
+<li>Lembrem-se que os dados de passagens estão no firebase.</li>
+<li>O objeto aeroportos recuperado do firebase possui o campo &#34;city&#34;.</li>
+<li>Os objetos passagens e aeroportos possuem o campo &#34;code&#34; em comum.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Exibindo os dados para nosso cliente" duration="3">
+        <p>Depois de buscarmos os dados precisamos exibi-los para o nosso cliente</p>
+<ul>
+<li>Uma das maneiras seria exibindo uma tabela. Sinta-se a vontade para inovar.</li>
+</ul>
+<pre><code>    //Uma das maneiras de criar elementos no DOM, utilizando javascript
+    let tabela = document.createElement(&#34;TABLE&#34;);
+    // Como atribuir uma classe ao elemento tabela, de uma olhada nas classes de tabela do bootstrap
+    tabela.className = &#34;MinhaClasse1 MinhaClasse1-borda&#34;;
+</code></pre>
+<ul>
+<li>Para criação das linhas e colunas desta tabela dê uma olhada no artigo https://www.w3schools.com/jsref/met_table_insertrow.asp</li>
+</ul>
+<p>O método forEach pode ser muito interessante para iterarmos sobre arrays.</p>
+<pre><code>let pessoas = [{
+    nome: &#34;Maria&#34;,
+    bairro: &#34;Castelo&#34;,
+    idade: 15
+},
+
+{
+    nome: &#34;Jose&#34;,
+    bairro: &#34;Buritis&#34;,
+    idade: 20
+},
+
+{
+    nome: &#34;Bruna&#34;,
+    bairro: &#34;Buritis&#34;,
+    idade: 20
+}];
+
+ pessoas.forEach((elemento, index) =&gt; {
+        console.log(elemento.nome + &#34; do index&#34; + index);
+    });
+</code></pre>
+<p>Para adicionarmos um elemento a um já existente vocês poderão utilizar:</p>
+<pre><code>let novoElemento = document.createElement(&#34;div&#34;);
+document.getElementById(&#34;meuElementoExistente&#34;).appendChild(novoElemento);
+</code></pre>
+<p>Dicas:</p>
+<ul>
+<li>Não existe nenhum problema em exibir apenas os dados do objeto passagens, ou seja, não é necessário exibir o nome da cidade.</li>
+<li>Mesmo se a combinação escolhida pelo cliente não retornar dados, não se preucupem, melhoraremos isto na próxima versão.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Deploy" duration="3">
+        <aside class="special"><p>Agora só falta publicar a sua aplicação. Basta rodar o comando abaixo dentro do diretório da sua aplicação.</p>
+</aside>
+<pre><code>firebase deploy
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Bônus" duration="3">
+        <aside class="special"><p>Se vocês chegaram até aqui com tudo funcionando, parabêns vocês estão indo muito bem!!</p>
+</aside>
+<p>Vamos atualizar a nossa estória de usuário &#34;Buscar Passagens&#34;.</p>
+<p>Buscar passagens:</p>
+<p>Eu como cliente desejo buscar passagens aéreas, para facilitar o meu dia a dia na compra de passagens.</p>
+<p>Critérios de aceitação:</p>
+<ul>
+<li>O cliente deverá informar o aeroporto de origem.</li>
+<li>O cliente deverá informar o aeroporto de destino.</li>
+<li>O sistema deverá validar se o cliente preencheu origem e destino.</li>
+<li>Após o cliente acionar a busca de passagens, o sistema deverá exibir para ele o resultado da mesma.</li>
+<li>O sistema deverá informar ao cliente se a busca não retornar nenhum resultado.</li>
+<li>O cliente deve conseguir selecionar uma passagem a partir da busca.</li>
+</ul>
+<p>As seguintes informações devem ser exibidas para o cliente após a busca:</p>
+<ul>
+<li>Cidade origem concatenada com código do aeroporto.</li>
+<li>Cidade destino concatenada com código do aeroporto.</li>
+<li>Data de origem formatada em &#34;dd/MM/yyyy hh:mm:ss&#34;.</li>
+<li>Data de destino formatada em &#34;dd/MM/yyyy hh:mm:ss&#34;.</li>
+<li>Preço arrendodado para inteiro.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-49880327-14', 'auto');
+
+    (function() {
+      var gaCodelab = '0';
+      if (gaCodelab) {
+        ga('create', gaCodelab, 'auto', {name: 'codelab'});
+      }
+
+      var gaView;
+      var parts = location.search.substring(1).split('&');
+      for (var i = 0; i < parts.length; i++) {
+        var param = parts[i].split('=');
+        if (param[0] === 'viewga') {
+          gaView = param[1];
+          break;
+        }
+      }
+      if (gaView && gaView !== gaCodelab) {
+        ga('create', gaView, 'auto', {name: 'view'});
+      }
+    })();
+  </script>
+
+</body>
+</html>
