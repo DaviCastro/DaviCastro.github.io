@@ -14,7 +14,7 @@ Duration: 3:00
 
 Este será o seu guia para construção do desafio. O primeiro e mais importe ponto é:
 * Relaxe, todos nós já estivemos na sua situação, e sabemos o quão dificil é, então procurem se divertir e lembrem-se que errar faz parte do aprendizado. 
-* Nós temos diversas vagas, então não se preucupem com a competição. Deêm o seu melhor.
+* Nós temos diversas vagas, então não se preocupem com a competição. Deêm o seu melhor.
 * No seu ambiente de trabalho o sucesso é e sempre será resultado de um trabalho em equipe!!!
 * No decorrer deste guia vocês poderão encontrar novos termos, mas não se preucupem, pois não esperamos que vocês já os conheçam. O próprio guia irá desmistificá-los e vocês podem pedir ajuda a qualquer momento.
 
